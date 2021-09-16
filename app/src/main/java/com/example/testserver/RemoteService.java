@@ -44,7 +44,7 @@ public class RemoteService extends Service {
     }
 
     /** * 实现IRemoteService.aidl中定义的方法 */
-    private final IRemoteService.Stub mBinder = new IRemoteService.Stub() {
+    private final com.example.testserver.IRemoteService.Stub mBinder = new IRemoteService.Stub() {
 
         @Override
         public int getPid() throws RemoteException {
@@ -61,6 +61,7 @@ public class RemoteService extends Service {
         /**此处可用于权限拦截**/
         @Override
         public boolean onTransact(int code, Parcel data, Parcel reply, int flags) throws RemoteException {
+            Log.i(TAG,"[RemoteService] onTransact() code： " + code);
             return super.onTransact(code, data, reply, flags);
         }
     };

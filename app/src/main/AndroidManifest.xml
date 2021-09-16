@@ -10,7 +10,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TestServer">
         <activity
-            android:name=".MainActivity"
+            android:name="com.example.testserver.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,7 +22,7 @@
         <service
             android:enabled="true"
             android:exported="true"
-            android:name=".RemoteService">
+            android:name="com.example.testserver.RemoteService">
             <intent-filter>
                 <action android:name="CkyRemoteService" />
                 <category android:name="android.intent.category.DEFAULT" />
